@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ece0e1;
+}
+
+h1 {
+    font-weight: bold;
+    color: #220303;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.border {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/*comprar*/
+.btn-success {
+    background-color: #ac586a; 
+    border-color: #ac586a;
+}
+
+/*borrar*/
+.btn-danger {
+    background-color: #7770d6; 
+    border-color: #7770d6;
+}
+
+
+.btn-success:hover {
+    background-color: #d49da4;
+    border-color: #d49da4;
+}
+
+.btn-danger:hover {
+    background-color: #8e89d8;
+    border-color: #8e89d8;
+}

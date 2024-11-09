@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Registradora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Columna de productos -->
+            <div class="col-4">
+                <h1>Productos</h1>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Seleccionar Producto
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="addProduct('Arroz', 3600)">Arroz - $3600</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="addProduct('Carne', 14000)">Carne - $14000</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="addProduct('Pollo', 10000)">Pollo - $10000</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="addProduct('Pescado', 15000)">Pescado -
+                                $15000</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="addProduct('Frutas', 10000)">Frutas - $10000</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="addProduct('Servilletas', 2800)">Servilletas -
+                                $2800</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="addProduct('Agua', 2500)">Agua - $2500</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Columna de compra -->
+            <div class="col-8">
+                <h3>Compra</h3>
+                <div class="border p-3">
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label>Producto</label>
+                            <input type="text" id="productName" class="form-control" readonly>
+                        </div>
+                        <div class="col-6">
+                            <label>Cantidad</label>
+                            <input type="number" id="productQuantity" class="form-control" value="1" min="1">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label>$Precio</label>
+                            <input type="text" id="productPrice" class="form-control" readonly>
+                        </div>
+
+                        <!-- imagen del producto -->
+                        <div class="col-6">
+                            <img id="productImage" src="placeholder.jpg" alt="Imagen del producto"
+                                style="width: 200px; height: 200px;">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <button class="btn btn-success w-100" onclick="confirmPurchase()">Comprar</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-danger w-100" onclick="clearCart()">Borrar</button>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label>Descripción de la compra</label>
+                            <textarea id="purchaseDescription" class="form-control" rows="3" readonly></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <h4>Total: $<span id="totalPrice">0</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
